@@ -119,8 +119,8 @@ def main():
         choice = input(f"{Fore.YELLOW}Do you want to [S]plit or [J]oin files? (S/J): {Fore.RESET}").strip().lower()
 
         if choice == 's':
-            filename = "combo.txt" #input(f"{Fore.CYAN}Enter file to split: {Fore.RESET}").strip()
-            output_directory = "report" # input(f"{Fore.CYAN}Enter output folder name: {Fore.RESET}").strip()
+            filename = input(f"{Fore.CYAN}Enter file to split: {Fore.RESET}").strip()
+            output_directory = "reports" # input(f"{Fore.CYAN}Enter output folder name: {Fore.RESET}").strip()
             num_splits = input(f"{Fore.CYAN}Enter number of splits: {Fore.RESET}").strip()
 
             if not num_splits.isdigit():
@@ -132,7 +132,7 @@ def main():
             split_file(filename, num_splits, output_directory)
 
         elif choice == 'j':
-            input_directory = "report" #input(f"{Fore.CYAN}Enter folder with split files: {Fore.RESET}").strip()
+            input_directory = "reports" #input(f"{Fore.CYAN}Enter folder with split files: {Fore.RESET}").strip()
             output_filename = "list_new.txt" #input(f"{Fore.CYAN}Enter output filename (e.g., file.txt): {Fore.RESET}").strip()
             animated_message("Joining files", 2.0)
             join_files(input_directory, output_filename)
