@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: ইউজার থেকে ইনপুট নিও
-set /p max="Enter how many input files to scan (e.g. 20): "
+set /p max="Enter how many input files to scan (e.g. 1 - 20): "
 
 :: output\wayback ফোল্ডার বানাও যদি না থাকে
 if not exist output\wayback (
@@ -18,3 +18,4 @@ for /L %%i in (1,1,%max%) do (
 
 echo [✓] All scans started in parallel.
 pause
+
